@@ -1,9 +1,0 @@
-Thank you for creating these flashcards. Now, I'd like you to review the deck you've just created and make the following improvements:
-
-    Check if any flashcards are too broad or contain multiple concepts. If so, split them into more focused cards.
-    Verify the accuracy of all answers and correct any errors you find.
-    Ensure each card follows the best practices we discussed earlier (simple, clear, focused on important information, specific questions, direct language, single key fact in answers).
-    Look for opportunities to make the cards more effective for learning, such as rephrasing for clarity or adding important details where necessary.
-    If you find any cards that don't meet our quality standards, please revise or remove them.
-
-After your review, please provide me with the improved set of flashcards, highlighting any significant changes you've made. If you haven't made any changes, please confirm that the original set meets all our criteria for effective flashcards.
