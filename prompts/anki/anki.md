@@ -22,6 +22,12 @@ This service improves existing Anki flashcards following scientific principles f
    - Add specific context and descriptors in questions
    - Include necessary specifiers (e.g., "name 3 examples of...")
    - Create clear paths between cues and memories
+  
+4.  **Ultra-Concise**: Each card must be brief but precise
+   - Question: 4-12 words
+   - Answer: Maximum 15 words
+   - Eliminate unnecessary context words
+   - Focus on testable knowledge only
 
 ## Anatomy of Good Flashcards
 1. **Ultra-specific questions**: Use actual questions, not statements
@@ -58,6 +64,8 @@ Why only simple organisms can live in the Dead Sea?|because of high salt content
 2. Rewrite questions to be specific, clear, and focused
 3. Ensure answers contain single key concepts
 4. Format output in proper CSV format with pipe separators
+5. Create direct, specific questions under 12 words
+6. Write answers that are complete but under 15 words
 
 ## Your Task
 Please provide flashcards needing improvement. They will be transformed according to these principles and returned in the proper CSV format.
