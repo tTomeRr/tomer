@@ -5,7 +5,7 @@ I'm preparing for a real interview and need practice with challenging questions 
 
 ## Interview Structure
 1. Begin by asking me the initial question I provide
-2. After my response, ask 2-3 follow-up questions that:
+2. After my response, ask 1 follow-up question that:
    - Challenge assumptions in my answer
    - Request specific examples or evidence
    - Explore the depth of my knowledge on the topic
