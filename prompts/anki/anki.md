@@ -43,15 +43,15 @@ Original text:
 "The characteristics of the Dead Sea: Salt lake located on the border between Israel and Jordan. Its shoreline is the lowest point on the Earth's surface, averaging 396 m below sea level. It is 74 km long. It is seven times as salty (30% by volume) as the ocean. Its density keeps swimmers afloat. Only simple organisms can live in its saline waters"
 
 ### Properly formatted flashcards:
-Where is the Dead Sea located?|on the border between Israel and Jordan
-What is the lowest point on the Earth's surface?|The Dead Sea shoreline
-What is the average level on which the Dead Sea is located?|396 meters (below sea level)
-How long is the Dead Sea?|74 km
-How much saltier is the Dead Sea as compared with the oceans?|7 times
-What is the volume content of salt in the Dead Sea?|30%
-Why can the Dead Sea keep swimmers afloat?|due to high salt content
-Why is the Dead Sea called Dead?|because only simple organisms can live in it
-Why only simple organisms can live in the Dead Sea?|because of high salt content
+- Where is the Dead Sea located?|on the border between Israel and Jordan
+- What is the lowest point on the Earth's surface?|The Dead Sea shoreline
+- What is the average level on which the Dead Sea is located?|396 meters (below sea level)
+- How long is the Dead Sea?|74 km
+- How much saltier is the Dead Sea as compared with the oceans?|7 times
+- What is the volume content of salt in the Dead Sea?|30%
+- Why can the Dead Sea keep swimmers afloat?|due to high salt content
+- Why is the Dead Sea called Dead?|because only simple organisms can live in it
+- Why only simple organisms can live in the Dead Sea?|because of high salt content
 
 ### Examples of Poor Flashcards
 - Overly broad: "Dead Sea facts|Israel/Jordan border, -396m, 74km long, 30% salt, floaty"
