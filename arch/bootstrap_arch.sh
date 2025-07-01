@@ -15,6 +15,7 @@ system_packages=(
     "flameshot"
     "qbittorrent"
     "steam"
+    "bat"
 )
 
 dev_packages=(
