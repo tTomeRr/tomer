@@ -38,6 +38,7 @@ aur_packages=(
     "visual-studio-code-bin"
     "openshift-client-bin"
     "spotify"
+    "git-completion"
 )
 
 echo "Installing system packages..."
