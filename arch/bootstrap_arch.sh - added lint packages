@@ -33,6 +33,12 @@ driver_packages=(
     "nvidia-settings"
 )
 
+lint_packages=(
+    "yamllint"
+    "flake8" 
+    "shellcheck" 
+)
+
 aur_packages=(
     "anki"
     "visual-studio-code-bin"
@@ -49,6 +55,9 @@ sudo pacman -S --noconfirm ${dev_packages[@]}
 
 echo "Installing driver packages..."
 sudo pacman -S --noconfirm ${driver_packages[@]}
+
+echo "Installing lint packages..."
+sudo pacman -S --noconfirm ${lint_packages[@]}
 
 if ! command -v yay &> /dev/null; then
     echo "Installing yay AUR helper..."
