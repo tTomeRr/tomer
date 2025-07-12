@@ -111,10 +111,5 @@ NoDisplay=false
 X-GNOME-Autostart-enabled=true
 EOF
 
-# Disable GNOME's Super+V notification binding:
+# If using CopyQ with Super+ V - Disable GNOME's Super+V notification binding: 
 gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
-
-# Create shortcut for CopyQ to Super+V
-gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/']"
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ name 'CopyQ'
-gsettings set org.gnome.settings-daemon.plugins.media-keys.custom-keybinding:/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/ binding '<Super>v'
