@@ -412,3 +412,9 @@ Add a shortcut for the Flameshot screenshot tool:
 3. Command: script --command "QT_QPA_PLATFORM=wayland flameshot gui" /dev/null
 4. Set your preferred keyboard shortcut (e.g., Print Screen key)
 
+### 9.5 Configure CopyQ (Optional)
+Add a shortcut for the CopyQ screenshot tool:
+1. Go to: Settings → Keyboard → View and customize shortcuts → Custom shortcuts → +
+2. Name: CopyQ
+3. Command:  bash -c -- 'env QT_QPA_PLATFORM=xcb copyq menu'
+4. Set your preferred keyboard shortcut (e.g., Super + V)
