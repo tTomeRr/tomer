@@ -96,3 +96,17 @@ EOF
 
 systemctl --user enable qbittorrent.service
 systemctl --user start qbittorrent.service
+
+# Create autostart directory if it doesn't exist
+mkdir -p ~/.config/autostart
+
+# Create autostart file for CopyQ
+cat > ~/.config/autostart/copyq.desktop << EOF
+[Desktop Entry]
+Type=Application
+Name=CopyQ
+Exec=copyq
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+EOF
