@@ -25,6 +25,7 @@ dev_packages=(
     "nodejs"
     "npm"
     "xclip"
+    "copyq"
 )
 
 driver_packages=(
