@@ -24,6 +24,7 @@ dev_packages=(
     "helm"
     "nodejs"
     "npm"
+    "xclip"
 )
 
 driver_packages=(
