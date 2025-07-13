@@ -20,6 +20,7 @@ system_packages=(
 
 dev_packages=(
     "docker"
+    "docker-compose"
     "kubectl"
     "helm"
     "nodejs"
