@@ -115,3 +115,18 @@ EOF
 
 # If using GPaste with Super+ V - Disable GNOME's Super+V notification binding: 
 gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
+
+
+########### ASUS AX-56 WIFI ADAPTER INSTALLATION ###########
+# sudo pacman -Syu bc dkms
+# https://github.com/lwfinger/rtl8852au
+# cd /tmp
+# git clone https://aur.archlinux.org/rtw89-dkms-git.git
+# cd rtw89-dkms-git
+# makepkg -sri
+
+# cd /tmp
+# git clone https://github.com/lwfinger/rtl8852au.git
+# cd rtl8852au
+# make
+# sudo make install
