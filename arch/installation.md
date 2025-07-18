@@ -419,7 +419,7 @@ Add a shortcut for the GPaste screenshot tool:
 3. Command: /usr/lib/gpaste/gpaste-ui
 4. Set your preferred keyboard shortcut (e.g., Super + V)
 
-### 9.6 ASUS AX56 WiFi Adapter Setup
+### 9.6 ASUS AX56 WiFi Adapter Setup (Optional)
 1. Install required packages:
    ```
    sudo pacman -S git dkms usb_modeswitch
