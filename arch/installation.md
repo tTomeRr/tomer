@@ -418,3 +418,39 @@ Add a shortcut for the GPaste screenshot tool:
 2. Name: GPaste
 3. Command: /usr/lib/gpaste/gpaste-ui
 4. Set your preferred keyboard shortcut (e.g., Super + V)
+
+### 9.6 ASUS AX56 WiFi Adapter Setup
+1. Install required packages:
+   ```
+   sudo pacman -S git dkms usb_modeswitch
+   ```
+
+2. Install RTL8852AU driver:
+   ```
+   cd /tmp
+   git clone https://github.com/lwfinger/rtl8852au.git
+   sudo dkms add ./rtl8852au
+   sudo dkms install rtl8852au/1.15.0.1
+   ```
+
+3. Create udev rule for automatic mode switching:
+   ```
+   sudo nano /etc/udev/rules.d/99-asus-ax56.rules
+   ```
+   Add:
+   ```
+   ATTR{idVendor}=="0bda", ATTR{idProduct}=="1a2b", RUN+="/usr/bin/usb_modeswitch -K -v 0bda -p 1a2b"
+   ```
+
+4. Reload udev rules and switch device:
+   ```
+   sudo udevadm control --reload-rules
+   sudo usb_modeswitch -K -v 0bda -p 1a2b
+   ```
+
+5. Unplug and replug the adapter. Verify with:
+   ```
+   lsusb    # Should show "ASUSTek Computer, Inc. 802.11ac WLAN Adapter"
+   ip link show    # Should show wireless interface (e.g., wlp32s0f3u2)
+   ```
+Refernces: https://github.com/lwfinger/rtl8852au
