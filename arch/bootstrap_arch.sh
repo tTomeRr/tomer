@@ -115,3 +115,34 @@ EOF
 
 # If using GPaste with Super+ V - Disable GNOME's Super+V notification binding: 
 gsettings set org.gnome.shell.keybindings toggle-message-tray "['<Super>m']"
+
+# Install better Hebrew fonts
+sudo pacman -S noto-fonts noto-fonts-extra
+
+sudo tee /etc/fonts/local.conf > /dev/null << 'EOF'
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+ <match target="pattern">
+   <test name="lang" compare="contains">
+     <string>he</string>
+   </test>
+   <edit name="family" mode="prepend" binding="strong">
+     <string>Noto Sans Hebrew</string>
+   </edit>
+ </match>
+ <match target="pattern">
+   <test name="lang" compare="contains">
+     <string>he</string>
+   </test>
+   <test name="family">
+     <string>serif</string>
+   </test>
+   <edit name="family" mode="prepend" binding="strong">
+     <string>Noto Serif Hebrew</string>
+   </edit>
+ </match>
+</fontconfig>
+EOF
+
+fc-cache -fv
