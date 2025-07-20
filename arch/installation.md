@@ -454,3 +454,27 @@ Add a shortcut for the GPaste screenshot tool:
    ip link show    # Should show wireless interface (e.g., wlp32s0f3u2)
    ```
 Refernces: https://github.com/lwfinger/rtl8852au
+
+### 9.5 - Create 6GB Swap File
+
+```bash
+sudo fallocate -l 6G /swapfile
+# If fallocate not working - sudo dd if=/dev/zero of=/swapfile bs=1M count=6144 status=progress
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+```
+
+#### Make Permanent
+
+Add to `/etc/fstab`:
+```
+/swapfile none swap defaults 0 0
+```
+
+#### Verify
+
+```bash
+free -h
+swapon --show
+```
