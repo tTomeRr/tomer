@@ -455,7 +455,7 @@ Add a shortcut for the GPaste screenshot tool:
    ```
 Refernces: https://github.com/lwfinger/rtl8852au
 
-### 9.5 - Create 6GB Swap File
+### 9.7 Create 6GB Swap File
 
 ```bash
 sudo fallocate -l 6G /swapfile
