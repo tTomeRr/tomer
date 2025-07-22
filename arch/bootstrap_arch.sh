@@ -19,6 +19,10 @@ system_packages=(
     "man-db"
     "man-pages"
     "code"
+    "extension-manager"
+    "gnome-browser-connector"
+    "alacritty"
+    "tmux"
 )
 
 dev_packages=(
