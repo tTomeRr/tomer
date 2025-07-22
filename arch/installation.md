@@ -478,3 +478,21 @@ Add to `/etc/fstab`:
 free -h
 swapon --show
 ```
+
+### 9.7 Install Blur my Shell Extension
+
+#### 1. Install Browser Integration
+```
+# Install browser extension:
+# Firefox: https://addons.mozilla.org/firefox/addon/gnome-shell-integration/
+```
+
+#### 2. Install Extension
+1. Visit: https://extensions.gnome.org/extension/3193/blur-my-shell/
+2. Click "Install" button
+
+#### Configure
+
+1. Settings → Extensions → Blur my Shell → Settings
+2. Applications tab → Enable "Applications blur"
+3. Recommended: Sigma `20`, Brightness `0.8`, Opacity `80`
