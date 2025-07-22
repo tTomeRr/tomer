@@ -385,7 +385,7 @@ gsettings set org.gnome.desktop.wm.keybindings switch-input-source "['<Alt>Shift
 Add terminal shortcut:
 1. Go to: Settings → Keyboard → View and customize shortcuts → Custom shortcuts → +
 2. Name: Terminal
-3. Command: kgx
+3. Command: alacritty -e tmux
 4. Shortcut: Ctrl + Alt + T
 
 ### 9.3 Enable Multilib Repository (For Steam)
