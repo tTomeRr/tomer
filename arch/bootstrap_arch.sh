@@ -16,6 +16,7 @@ system_packages=(
     "qbittorrent"
     "steam"
     "bat"
+    "man"
 )
 
 dev_packages=(
