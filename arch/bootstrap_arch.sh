@@ -16,7 +16,9 @@ system_packages=(
     "qbittorrent"
     "steam"
     "bat"
-    "man"
+    "man-db"
+    "man-pages"
+    "code"
 )
 
 dev_packages=(
@@ -45,7 +47,6 @@ lint_packages=(
 
 aur_packages=(
     "anki"
-    "visual-studio-code-bin"
     "openshift-client-bin"
     "spotify"
     "git-completion"
