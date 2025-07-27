@@ -33,12 +33,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Load git completion specifically
-if [ -f /usr/share/git/completion/git-completion.bash ]; then
-    source /usr/share/git/completion/git-completion.bash
-elif [ -f /usr/share/bash-completion/completions/git ]; then
-    source /usr/share/bash-completion/completions/git
-fi
 
 # ============================================================================
 # COLORS
@@ -49,13 +43,8 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Color variables for prompt
-RED='\[\033[0;31m\]'
 GREEN='\[\033[0;32m\]'
 BLUE='\[\033[0;34m\]'
-CYAN='\[\033[0;36m\]'
-YELLOW='\[\033[1;33m\]'
-PURPLE='\[\033[0;35m\]'
-WHITE='\[\033[1;37m\]'
 RESET='\[\033[0m\]'
 
 alias ls='ls --color=auto'
@@ -63,31 +52,21 @@ alias grep='grep --color=auto'
 alias diff='diff --color=auto'
 
 # ============================================================================
-# GIT PROMPT FUNCTION
+# GIT PROMPT SETUP
 # ============================================================================
-git_branch() {
-    local branch
-    if branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null); then
-        if [[ $branch == "HEAD" ]]; then
-            branch='detached*'
-        fi
-        
-        # Check if repo has changes (including untracked files)
-        if git diff-index --quiet HEAD -- 2>/dev/null && [ -z "$(git ls-files --others --exclude-standard 2>/dev/null)" ]; then
-            # Clean repo - green
-            echo -e " \033[32m(${branch})\033[0m"
-        else
-            # Dirty repo - red
-            echo -e " \033[31m(${branch})\033[0m"
-        fi
-    fi
-}
+# Load git prompt script
+source /usr/share/git/git-prompt.sh
+
+# Configure git prompt options
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUNTRACKEDFILES=1
 
 # ============================================================================
 # CUSTOM PROMPT
 # ============================================================================
 # Format: [user@hostname path] (git-branch) $
-PS1="${BLUE}[${GREEN}\u@\h ${BLUE}\w${BLUE}]\$(git_branch)${RESET} ${GREEN}\$${RESET} "
+PS1="${BLUE}[${GREEN}\u@\h ${BLUE}\w${BLUE}]\$(__git_ps1)${RESET} ${GREEN}\$${RESET} "
 
 # ============================================================================
 # ENVIRONMENT VARIABLES
