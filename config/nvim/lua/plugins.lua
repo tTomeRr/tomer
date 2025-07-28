@@ -1,5 +1,21 @@
 return {
 
+  -- Colorscheme
+  {
+    "navarasu/onedark.nvim",
+    priority = 1000,
+    config = function()
+      require('onedark').setup({
+        style = 'dark',
+        transparent = true,
+        term_colors = true,
+        ending_tildes = false,
+        cmp_itemkind_reverse = false,
+      })
+      require('onedark').load()
+    end,
+  },
+
   -- File explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -16,10 +32,20 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "yaml", "dockerfile", "bash", "python", "lua" },
+        ensure_installed = { "yaml", "dockerfile", "bash", "python", "lua", "markdown", "markdown_inline" },
         highlight = { enable = true },
         indent = { enable = true },
       })
+    end,
+  },
+
+  -- Markdown rendering
+  {
+    'MeanderingProgrammer/render-markdown.nvim',
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
+    config = function()
+      require('render-markdown').setup({})
+      vim.keymap.set('n', 'tm', '<cmd>RenderMarkdown toggle<CR>', { desc = 'Toggle markdown rendering' })
     end,
   },
 

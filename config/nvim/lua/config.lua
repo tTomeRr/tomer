@@ -40,11 +40,7 @@ vim.keymap.set("", "<Right>", "<Nop>")
 vim.keymap.set("", "<Down>", "<Nop>")
 
 
--- theme & transparency
-vim.cmd.colorscheme("unokai")                 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })     
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })  
-vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" }) 
+-- theme & transparency (handled by onedark plugin now) 
 
 
 -- Return to last edit position when opening files
