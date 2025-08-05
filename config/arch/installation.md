@@ -495,4 +495,4 @@ swapon --show
 
 1. Settings → Extensions → Blur my Shell → Settings
 2. Applications tab → Enable "Applications blur"
-3. Recommended: Sigma `20`, Brightness `0.8`, Opacity `80`
+3. Recommended: Sigma `10`, Brightness `1.0`, Opacity `255`
