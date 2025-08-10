@@ -34,6 +34,7 @@ dev_packages=(
     "npm"
     "xclip"
     "gpaste"
+    "azure-cli"
 )
 
 driver_packages=(
