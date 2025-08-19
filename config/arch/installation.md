@@ -409,7 +409,7 @@ sudo pacman -Sy
 Add a shortcut for the Flameshot screenshot tool:
 1. Go to: Settings → Keyboard → View and customize shortcuts → Custom shortcuts → +
 2. Name: Flameshot
-3. Command: script --command "QT_QPA_PLATFORM=wayland flameshot gui" /dev/null
+3. Command:  sh -c "flameshot gui --raw | wl-copy --type image/png && notify-send 'Screenshot copied'"
 4. Set your preferred keyboard shortcut (e.g., Print Screen key)
 
 ### 9.5 Configure GPaste (Optional)
