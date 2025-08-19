@@ -35,6 +35,7 @@ dev_packages=(
     "xclip"
     "gpaste"
     "azure-cli"
+    "go"
 )
 
 driver_packages=(
@@ -48,6 +49,11 @@ lint_packages=(
     "yamllint"
     "flake8" 
     "shellcheck" 
+    "shfmt"
+    "python-black"
+    "python-isort"
+    "golangci-lint"
+    "gofumpt"
 )
 
 aur_packages=(
@@ -55,6 +61,7 @@ aur_packages=(
     "openshift-client-bin"
     "spotify"
     "git-completion"
+    "prettier"
 )
 
 echo "Installing system packages..."
