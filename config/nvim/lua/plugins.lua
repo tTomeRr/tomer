@@ -32,7 +32,7 @@ return {
     build = ":TSUpdate",
     config = function()
       require("nvim-treesitter.configs").setup({
-        ensure_installed = { "yaml", "dockerfile", "bash", "python", "lua", "markdown", "markdown_inline" },
+        ensure_installed = { "yaml", "dockerfile", "bash", "python", "lua", "markdown", "markdown_inline", "go", "gomod", "gowork", "gosum" },
         highlight = { enable = true },
         indent = { enable = true },
       })
@@ -58,6 +58,7 @@ return {
         python = { 'flake8' },
         bash = { 'shellcheck' },
         sh = { 'shellcheck' },
+        go = { 'golangcilint' },
       }
 
       -- Configure diagnostics to always show
@@ -101,4 +102,85 @@ return {
       end, { desc = "Toggle diagnostics" })
     end,
   },
+
+  -- LSP Configuration
+  {
+    "neovim/nvim-lspconfig",
+    dependencies = {
+      "williamboman/mason.nvim",
+      "williamboman/mason-lspconfig.nvim",
+      "hrsh7th/cmp-nvim-lsp",
+    },
+    config = function()
+      require("mason").setup()
+      require("mason-lspconfig").setup({
+        ensure_installed = { "gopls" },
+        automatic_installation = true,
+      })
+
+      local lspconfig = require("lspconfig")
+      local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
+      lspconfig.gopls.setup({
+        capabilities = capabilities,
+        settings = {
+          gopls = {
+            gofumpt = true,
+            usePlaceholders = true,
+            completeUnimported = true,
+          },
+        },
+      })
+
+    end,
+  },
+
+  -- Formatting
+  {
+    "stevearc/conform.nvim",
+    config = function()
+      require("conform").setup({
+        formatters_by_ft = {
+          go = { "gofumpt" },
+          python = { "black", "isort" },
+          bash = { "shfmt" },
+          sh = { "shfmt" },
+          yaml = { "prettier" },
+        },
+        format_on_save = {
+          timeout_ms = 500,
+          lsp_fallback = true,
+        },
+      })
+      
+      vim.keymap.set("n", "<leader>f", function()
+        require("conform").format({ async = true, lsp_fallback = true })
+      end, { desc = "Format file" })
+    end,
+  },
+
+  -- Autocompletion
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-buffer",
+    },
+    config = function()
+      local cmp = require("cmp")
+      cmp.setup({
+        mapping = cmp.mapping.preset.insert({
+          ["<C-Space>"] = cmp.mapping.complete(),
+          ["<CR>"] = cmp.mapping.confirm({ select = true }),
+          ["<Tab>"] = cmp.mapping.select_next_item(),
+          ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+        }),
+        sources = {
+          { name = "nvim_lsp" },
+          { name = "buffer" },
+        },
+      })
+    end,
+  },
+
 }
