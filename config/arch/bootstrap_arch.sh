@@ -23,6 +23,7 @@ system_packages=(
     "gnome-browser-connector"
     "alacritty"
     "tmux"
+    "bash-completion"
 )
 
 dev_packages=(
