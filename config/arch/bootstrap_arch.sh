@@ -24,6 +24,8 @@ system_packages=(
     "alacritty"
     "tmux"
     "bash-completion"
+    "gamemode"
+    "lib32-gamemode"
 )
 
 dev_packages=(
@@ -161,3 +163,46 @@ sudo tee /etc/fonts/local.conf > /dev/null << 'EOF'
 EOF
 
 fc-cache -fv
+
+sudo usermod -aG gamemode $USER
+
+
+## Gamemode ##
+sudo tee /etc/gamemode.ini << 'EOF'
+[general]
+reaper_freq=5
+desiredgov=performance
+desiredprof=performance
+igpu_desiredgov=powersave
+igpu_power_threshold=0.3
+softrealtime=off
+renice=10
+ioprio=1
+inhibit_screensaver=1
+disable_splitlock=1
+
+[filter]
+
+[gpu]
+apply_gpu_optimisations=accept-responsibility
+gpu_device=0
+amd_performance_level=high
+
+[cpu]
+park_cores=no
+pin_cores=yes
+
+[supervisor]
+require_supervisor=0
+
+[custom]
+script_timeout=10
+EOF
+
+# To add games to gamemode via Steam:
+# Open Steam, Right-click on the game
+# Select Properties. In Launch Options, add:
+# gamemoderun %command%
+
+
+
