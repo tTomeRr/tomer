@@ -18,11 +18,3 @@ Now that we've completed the interview, please:
 ## Flashcard Creation Request
 After providing the feedback above, please prompt me with:
 "To create targeted flashcards addressing your knowledge gaps, please share your preferred Anki flashcard generation prompt."
-
-## Flashcard Guidelines (For your reference after I provide my prompt)
-When I send you my Anki flashcard prompt, please:
-- Focus primarily on areas where I demonstrated weakness
-- Create 8-12 high-quality flashcards in CSV format using | as a separator
-- Ensure each card follows effective learning principles (atomic, specific, concise)
-- Format as: Question|Answer with one card per line
-- Include a mix of factual recall and conceptual understanding cards
