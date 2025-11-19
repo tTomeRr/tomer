@@ -32,3 +32,16 @@ For each round:
 - Next question
 
 Please confirm you understand these instructions, then wait for me to provide the initial interview topic and question.
+
+## User Input Required
+
+Before we begin, please provide:
+
+1. **Interviewer Persona**: Describe the role and expertise level of the interviewer you want me to simulate.
+   - Examples:
+     - A Senior DevOps engineer with 20 years of experience
+     - A network engineer with expertise in LAN configuration
+     - A technical lead specializing in cloud architecture
+     - A hiring manager for a startup with focus on culture fit
+
+2. **Initial Question**: The first question you'd like me to ask you in this interview.
