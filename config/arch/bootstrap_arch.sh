@@ -26,6 +26,7 @@ system_packages=(
     "bash-completion"
     "gamemode"
     "lib32-gamemode"
+    "kdeconnect"
 )
 
 dev_packages=(
