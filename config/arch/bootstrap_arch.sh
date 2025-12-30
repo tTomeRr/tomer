@@ -205,5 +205,6 @@ EOF
 # Select Properties. In Launch Options, add:
 # gamemoderun %command%
 
-
-
+# Enabling mouse scrolling with bat and tmux:
+mkdir -p ~/.config/bat
+echo '--pager="less --RAW-CONTROL-CHARS --quit-if-one-screen --mouse"' > ~/.config/bat/config
